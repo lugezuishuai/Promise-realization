@@ -1,0 +1,15 @@
+{
+  "name": "test",
+  "version": "",
+  "devDependencies": {
+    "babel-register": "^6.26.0",
+    "promises-aplus-tests": "^2.1.2",
+    "request": "^2.88.2"
+  },
+  "scripts": {
+    "test": "promises-aplus-tests MyPromise"
+  },
+  "dependencies": {
+    "koa": "^2.13.0"
+  }
+}
