@@ -115,7 +115,7 @@ class MyPromise {
             let promise2 = new MyPromise((resolve, reject) => {
                 //这里要添加setTimeout，保证回调在下一轮事件循环开始的时候执行
                 setTimeout(() => {
-                    //这里不能简单的调用realOnFullfilled函数了，要使用try...catch语句块抱起来，如果有错就reject
+                    //这里不能简单的调用realOnFullfilled函数了，要使用try...catch语句块包起来，如果有错就reject
                     try {
                         //加一层onFullfilled是不是函数的判断
                         if(typeof onFullfilled !== 'function') {
@@ -138,7 +138,7 @@ class MyPromise {
             let promise2 = new MyPromise((resolve, reject) => {
                 //这里要添加setTimeout，保证回调在下一轮事件循环开始的时候执行
                 setTimeout(() => {
-                    //这里不能简单的调用realOnRejected函数了，要使用try...catch语句块抱起来，如果有错就reject
+                    //这里不能简单的调用realOnRejected函数了，要使用try...catch语句块包起来，如果有错就reject
                     try {
                         //加一层onRejected是不是函数的判断
                         if(typeof onRejected !== 'function') {
